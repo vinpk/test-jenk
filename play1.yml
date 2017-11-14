@@ -1,0 +1,19 @@
+---
+
+ - name: tester
+   hosts: "{{hosts}}"
+   connection: local
+   gather_facts: no
+   
+   roles:
+     - creds
+
+   tasks:
+#   - copy:
+#         content: "{{ inventory_hostname }}\n"
+#         dest: "{{ playbook_dir }}/test_results/res.csv"
+
+   - lineinfile:
+         line: "{{ inventory_hostname }},OS"
+         path: "{{ playbook_dir }}/test_results/res.csv"
+

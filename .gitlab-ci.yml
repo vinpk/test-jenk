@@ -1,0 +1,5 @@
+---
+parse:
+   script:
+      - python ymparse.py
+

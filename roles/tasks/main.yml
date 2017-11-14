@@ -1,0 +1,5 @@
+---
+      - name: Include OS-Specific Task File
+        include: "{{ emds.os_name.lower() }}-ver.yml"
+
+
